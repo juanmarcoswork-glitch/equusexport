@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/equusexport/',
   plugins: [tailwindcss()],
   build: {
+    outDir: 'docs',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
@@ -31,17 +32,17 @@ export default defineConfig({
 
 ---
 
-### Paso 2 — Hacer el build en Git Bash
+### Paso 2 — Hacer el build
 ```
 npm run build
 ```
 
-Esto genera la carpeta `dist/` con todo compilado y optimizado.
+Esto genera la carpeta `docs/` con todo compilado.
 
 ---
 
-### Paso 3 — Subir el dist a GitHub
+### Paso 3 — Subir a GitHub
 ```
-git add dist -f
-git commit -m "build: add dist for github pages"
+git add .
+git commit -m "build: configure docs folder for github pages"
 git push

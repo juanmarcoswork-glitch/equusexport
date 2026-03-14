@@ -1,0 +1,58 @@
+{
+  "default": {
+    "siteName": "EquusExport",
+    "siteUrl": "https://equusexport.com",
+    "defaultImage": "/assets/images/og-default.jpg",
+    "twitterHandle": "@equusexport",
+    "locale": "es_ES"
+  },
+  "pages": {
+    "/": {
+      "title": "EquusExport | Exportación Internacional de Caballos desde España",
+      "description": "Exportación internacional de caballos con 20 años de experiencia. Centro de cuarentena homologado por el MAPA. Servicio puerta a puerta a más de 25 países."
+    },
+    "/servicios/": {
+      "title": "Servicios de Exportación Equina | EquusExport",
+      "description": "Exportación internacional, cuarentena homologada y transporte terrestre de caballos. Servicio completo de A a Z con supervisión del Ministerio de Agricultura."
+    },
+    "/servicios/exportacion-internacional/": {
+      "title": "Exportación Internacional de Caballos | EquusExport",
+      "description": "Transporte aéreo y terrestre de caballos puerta a puerta a más de 25 países. Homologados por el MAPA. Servicio completo desde España."
+    },
+    "/servicios/cuarentena/": {
+      "title": "Centro de Cuarentena para Caballos | EquusExport",
+      "description": "Centro de cuarentena homologado con más de 30 boxes individuales. Bajo vigilancia del Ministerio de Agricultura. Ubicado en España."
+    },
+    "/servicios/transporte-terrestre/": {
+      "title": "Transporte Terrestre de Caballos | EquusExport",
+      "description": "Transporte nacional e internacional de caballos con camión especializado. Bebederos continuos, climatización, GPS y conductores expertos."
+    },
+    "/sobre-nosotros/": {
+      "title": "Quiénes Somos | EquusExport — 20 Años Exportando Caballos",
+      "description": "Cristian y Celín llevan 20 años exportando caballos desde España. Conocemos cada caballo por su nombre. No somos números, somos familia."
+    },
+    "/blog/": {
+      "title": "Blog de Exportación Equina | EquusExport",
+      "description": "Artículos sobre exportación de caballos, cuarentena, transporte aéreo y logística equina. Guías y consejos de expertos con 20 años de experiencia."
+    },
+    "/contacto/": {
+      "title": "Contacto | EquusExport",
+      "description": "Contacta con EquusExport para solicitar presupuesto de exportación de caballos. Llamada directa, WhatsApp o formulario. Respuesta en 24 horas."
+    },
+    "/aviso-legal/": {
+      "title": "Aviso Legal | EquusExport",
+      "description": "Aviso legal de EquusExport. Datos identificativos y condiciones de uso del sitio web.",
+      "robots": "noindex, follow"
+    },
+    "/politica-de-privacidad/": {
+      "title": "Política de Privacidad | EquusExport",
+      "description": "Política de privacidad de EquusExport. Tratamiento de datos personales según el RGPD.",
+      "robots": "noindex, follow"
+    },
+    "/politica-de-cookies/": {
+      "title": "Política de Cookies | EquusExport",
+      "description": "Política de cookies de EquusExport. Información sobre cookies utilizadas en el sitio.",
+      "robots": "noindex, follow"
+    }
+  }
+}

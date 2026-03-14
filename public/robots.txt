@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-includes/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+
+Sitemap: https://equusexport.com/sitemap.xml

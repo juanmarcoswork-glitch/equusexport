@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/equusexport/',
   plugins: [tailwindcss()],
   build: {
     rollupOptions: {
@@ -26,3 +27,21 @@ export default defineConfig({
     },
   },
 });
+```
+
+---
+
+### Paso 2 — Hacer el build en Git Bash
+```
+npm run build
+```
+
+Esto genera la carpeta `dist/` con todo compilado y optimizado.
+
+---
+
+### Paso 3 — Subir el dist a GitHub
+```
+git add dist -f
+git commit -m "build: add dist for github pages"
+git push

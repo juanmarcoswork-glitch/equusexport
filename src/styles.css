@@ -66,14 +66,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 12px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition: all 0.3s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .btn-gold:hover {
@@ -83,8 +83,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-gold-lg {
-  padding: 16px 32px;
-  font-size: 18px;
+  padding: 12px 28px;
+  font-size: 14px;
 }
 
 .btn-whatsapp {
@@ -94,14 +94,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 12px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition: all 0.3s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .btn-whatsapp:hover {
@@ -110,8 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-whatsapp-lg {
-  padding: 16px 32px;
-  font-size: 18px;
+  padding: 12px 28px;
+  font-size: 14px;
 }
 
 /* Hero overlay */
@@ -119,6 +119,48 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: rgba(0, 10, 27, 0.7);
+}
+
+/* Hero H1 sizing */
+#inicio h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  #inicio h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #inicio h1 {
+    font-size: 3.25rem;
+  }
+}
+
+/* Hero slides */
+.hero-slide {
+  pointer-events: none;
+}
+.hero-slide.active {
+  pointer-events: auto;
+}
+
+/* Hero mobile padding */
+@media (max-width: 768px) {
+  #inicio {
+    padding-top: 40px;
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  .hero-slide img,
+  section > .absolute img[class*="object-cover"] {
+    object-position: center center;
+  }
 }
 
 /* Card hover effect */

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Ejemplo de estructura para cada post — WordPress completará esto -->
+  <!--
+  <url>
+    <loc>https://equusexport.com/blog/como-exportar-caballos-espana/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://equusexport.com/assets/blog/imagen-post.webp</image:loc>
+      <image:title>Cómo exportar caballos desde España</image:title>
+    </image:image>
+  </url>
+  -->
+
+</urlset>

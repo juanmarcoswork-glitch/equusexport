@@ -153,7 +153,7 @@
       <div class="max-w-7xl mx-auto px-4 py-2 flex justify-end items-center gap-4 text-sm text-text-muted">
         <a href="tel:+34657592063" class="flex items-center gap-2 hover:text-gold transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          +34 657 592 063
+          Christian: +34 657 59 20 63
         </a>
       </div>
     </div>
@@ -161,15 +161,26 @@
     <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="/equusexport/" class="flex items-center gap-3">
-        <img src="./assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-16 w-auto">
+        <img src="./assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-24 w-auto">
       </a>
       <!-- Desktop links -->
       <div class="desktop-nav hidden md:flex items-center gap-8">
-        <a href="/equusexport/" class="text-sm font-medium uppercase tracking-wider text-white hover:text-gold transition-colors">Inicio</a>
+        <a href="/equusexport/" class="text-sm font-medium uppercase tracking-wider text-white border-b-2 border-gold pb-1">Inicio</a>
+        <div class="relative group">
+          <button class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors flex items-center gap-1">
+            Servicios
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-navy border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/equusexport/servicios/exportacion-internacional.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors">Exportación Internacional</a>
+            <a href="/equusexport/servicios/cuarentena.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">Cuarentena</a>
+            <a href="/equusexport/servicios/transporte-terrestre.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">Transporte Terrestre</a>
+          </div>
+        </div>
+        <a href="/equusexport/blog/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Blog</a>
         <a href="/equusexport/sobre-nosotros.html" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Sobre Nosotros</a>
-        <a href="/equusexport/servicios/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Servicios</a>
         <a href="/equusexport/contacto.html" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Contacto</a>
-        <a href="tel:+34657592063" class="btn-gold text-xs">Pedir Presupuesto</a>
+        <a href="./contacto.html" class="btn-gold text-xs">Pedir Presupuesto</a>
       </div>
       <!-- Mobile hamburger -->
       <button id="mobile-toggle" class="mobile-menu text-white p-2" aria-label="Abrir menú">
@@ -178,25 +189,55 @@
     </nav>
     <!-- Mobile menu panel -->
     <div id="mobile-panel" class="hidden md:hidden bg-navy-light border-t border-white/10 px-4 pb-4">
-      <a href="/equusexport/" class="block py-3 text-sm font-medium uppercase tracking-wider text-white hover:text-gold transition-colors border-b border-white/5">Inicio</a>
+      <a href="/equusexport/" class="block py-3 text-sm font-medium uppercase tracking-wider text-gold border-b border-white/5">Inicio</a>
+      <div class="border-b border-white/5">
+        <button class="mobile-servicios-toggle w-full flex items-center justify-between py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">
+          Servicios
+          <svg class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-servicios-submenu hidden pl-4 pb-2 space-y-1">
+          <a href="/equusexport/servicios/exportacion-internacional.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Exportación Internacional</a>
+          <a href="/equusexport/servicios/cuarentena.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Cuarentena</a>
+          <a href="/equusexport/servicios/transporte-terrestre.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Transporte Terrestre</a>
+        </div>
+      </div>
+      <a href="/equusexport/blog/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Blog</a>
       <a href="/equusexport/sobre-nosotros.html" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Sobre Nosotros</a>
-      <a href="/equusexport/servicios/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Servicios</a>
       <a href="/equusexport/contacto.html" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Contacto</a>
-      <a href="tel:+34657592063" class="btn-gold mt-4 w-full justify-center text-xs">Pedir Presupuesto</a>
+      <a href="./contacto.html" class="btn-gold mt-4 w-full justify-center text-xs">Pedir Presupuesto</a>
     </div>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO CAROUSEL ===== -->
   <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background image -->
-    <div class="absolute inset-0">
-      <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte de caballos en camino - Equus Export.webp" alt="Camión Equus Export transportando caballos por carretera de montaña" class="w-full h-full object-cover" fetchpriority="high" />
-      <div class="hero-overlay"></div>
+    <!-- Carousel Slides -->
+    <div id="hero-carousel" class="absolute inset-0">
+      <div class="hero-slide active absolute inset-0 transition-opacity duration-1000 opacity-100">
+        <img src="./assets/images/galeria/imagen en Miniatura -Cuarentenas de caballos - Equus Export.webp" alt="Centro de cuarentena equina de Equus Export en Agost, Alicante" class="w-full h-full object-cover object-center" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+        <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Transporte aéreo internacional de caballos con Equus Export" class="w-full h-full object-cover object-center" loading="lazy" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+        <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte de caballos en camino - Equus Export.webp" alt="Camión Equus Export transportando caballos por carretera" class="w-full h-full object-cover object-center" loading="lazy" />
+        <div class="hero-overlay"></div>
+      </div>
     </div>
-    <!-- Content -->
+
+    <!-- Carousel Navigation Arrows -->
+    <button id="hero-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-navy/50 backdrop-blur-sm border border-white/20 text-white hover:bg-navy/80 transition-colors" aria-label="Slide anterior">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button id="hero-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-navy/50 backdrop-blur-sm border border-white/20 text-white hover:bg-navy/80 transition-colors" aria-label="Slide siguiente">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <!-- Content (stays on top of all slides) -->
     <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-32">
       <p class="text-gold uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-6 font-body">Transporte Ecuestre Premium</p>
-      <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8">
+      <h1 class="font-heading font-bold text-white leading-tight mb-8">
         Exportación de Caballos con <span class="text-gold italic">Garantía, Seguridad y Calidad</span>
       </h1>
       <p class="text-text-light text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body">
@@ -218,7 +259,7 @@
         </span>
       </div>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+34657592063" class="btn-gold btn-gold-lg justify-center">
+        <a href="./contacto.html" class="btn-gold btn-gold-lg justify-center">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Cotizar Envío
         </a>
@@ -228,9 +269,12 @@
         </a>
       </div>
     </div>
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+
+    <!-- Carousel Dots -->
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/80 border-2 border-transparent transition-all" data-slide="0" aria-label="Ir al slide 1"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/40 border-2 border-transparent transition-all" data-slide="1" aria-label="Ir al slide 2"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/40 border-2 border-transparent transition-all" data-slide="2" aria-label="Ir al slide 3"></button>
     </div>
   </section>
 
@@ -309,7 +353,7 @@
               </div>
               <div>
                 <h3 class="text-navy font-semibold text-lg mb-1">Atención Personalizada</h3>
-                <p class="text-text-body text-sm leading-relaxed font-body">Comunicación constante y reporte detallado del estado de su caballo en cada etapa, coordinado por Cristian y Celín.</p>
+                <p class="text-text-body text-sm leading-relaxed font-body">Comunicación constante y reporte detallado del estado de su caballo en cada etapa, coordinado por Christian y Celine.</p>
               </div>
             </div>
           </div>
@@ -349,7 +393,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Cuarentena y Sanidad</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Instalaciones de primera clase en Alicante para el cuidado previo al viaje, gestión de análisis clínicos y cumplimiento de normativas.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/cuarentena.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -367,7 +411,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Flete Aéreo</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Transporte seguro y eficiente en aviones de carga especializados, con establos de vuelo diseñados para la máxima seguridad y confort.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -385,7 +429,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Logística Terrestre</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Traslado confortable en nuestra flota de camiones especializados de Equus Export, con climatización y bebederos continuos.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/transporte-terrestre.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -403,7 +447,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Gestión Documental</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Gestión integral de todos los permisos, certificados de exportación, despachos de aduana y documentación requerida.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -421,7 +465,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Seguro Especializado</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Seguros de transporte, responsabilidad civil y cobertura integral para su caballo durante todo el proceso.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -439,7 +483,7 @@
             </div>
             <h3 class="font-heading text-2xl font-bold text-navy mb-3">Recepción en Destino</h3>
             <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Coordinación logística global con nuestros agentes internacionales para garantizar una recepción fluida y entrega segura.</p>
-            <a href="tel:+34657592063" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
               Ver más
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -513,7 +557,7 @@
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           </div>
-          <p class="text-text-light text-sm leading-relaxed mb-6 font-body italic">"Impecable servicio. Enviamos dos caballos de salto a Estados Unidos y el nivel de comunicación de Celín y Cristian durante todo el proceso fue excepcional. Llegaron en perfectas condiciones."</p>
+          <p class="text-text-light text-sm leading-relaxed mb-6 font-body italic">"Impecable servicio. Enviamos dos caballos de salto a Estados Unidos y el nivel de comunicación de Celine y Christian durante todo el proceso fue excepcional. Llegaron en perfectas condiciones."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">MR</div>
             <div>
@@ -572,14 +616,16 @@
         <p class="text-text-muted max-w-2xl mx-auto font-body">Conectamos Europa con los principales centros ecuestres del mundo.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- América -->
+        <!-- América y Centro América -->
         <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
+                <path d="M20 2c-1 1-2 3-3 5l-1 3c-1 1-2 3-1 5 0 1 1 2 0 3-1 2-3 3-4 5s0 4 0 6c1 2 0 4-1 6s-1 4 0 5c1 2 2 3 2 5l1 3h3c1-2 2-4 4-5 1-1 3-1 4-2 1-2 0-4 1-6s3-3 4-5c0-1 0-3-1-4l-2-3c0-1 1-3 2-4s1-3 1-4c-1-2-1-4-2-5l-2-4c-1-1-2-3-4-4l-1 0zM30 6c-1 1 0 3 0 4l2 3c1 1 1 3 1 5 0 1-1 3 0 4 1 2 3 2 4 4 1 1 1 3 1 5s1 3 2 4l2-1c0-2 0-4-1-6 0-2-1-4-2-5-1-2-2-3-2-5s-1-4-2-5c-1-2-3-3-4-5l-1-2z"/>
+              </svg>
             </div>
             <div>
-              <h3 class="font-heading text-2xl font-bold text-white mb-2">América</h3>
+              <h3 class="font-heading text-2xl font-bold text-white mb-2">América y Centro América</h3>
               <p class="text-text-muted text-sm leading-relaxed font-body">Rutas a Norteamérica (Miami, NY, LA), Centroamérica (Honduras, Guatemala, Costa Rica, Nicaragua) y Sudamérica (México, Brasil).</p>
             </div>
           </div>
@@ -588,7 +634,9 @@
         <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
+                <path d="M10 14c2 0 4 1 5 3 1 1 2 3 4 4 2 0 4-1 6-1 2 1 3 3 5 4 1 1 3 1 5 2 1 1 2 3 3 4v2c-1 1-3 2-5 2s-4 0-5 1c-2 1-3 3-5 4-1 1-3 1-5 1-1 0-3-1-4-2-1-2-1-4-2-6 0-1-1-3-1-4 0-2 1-4 1-6 0-2-1-4-2-5v-3z"/>
+              </svg>
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Medio Oriente</h3>
@@ -600,7 +648,9 @@
         <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 9c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-4.247m0 0A8.966 8.966 0 003 9c0-.778.099-1.533.284-2.253"/></svg>
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
+                <path d="M8 8c2 1 3 3 5 4 2 2 4 3 6 3 2 1 4 0 6-1 2 0 4 1 6 2 1 1 2 3 3 4 1 2 3 3 5 3v4c-1 1-3 2-4 4-1 1-1 3-2 5-1 1-3 2-5 2-1 0-3-1-4-2-2-1-3-3-5-4-1-1-3 0-5 0-1-1-3-2-4-4-1-1-1-3-1-5s1-4 1-5c-1-2-1-4-2-5V8zM32 28c1 1 1 3 2 4 0 2-1 4-1 6l-3 2c-1 0-3-1-4-2 0-2 1-4 2-5 1-2 2-3 4-5z"/>
+              </svg>
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Asia y Pacífico</h3>
@@ -612,7 +662,9 @@
         <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-3.75 0V5.625m0 12.75v-3.375m0 0V5.625m0 9.75H3.375m0 0h7.5m0 0v-9.75"/></svg>
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
+                <path d="M18 6c2 0 3 2 4 3 1 2 3 3 5 3 1 0 3-1 4 0 2 1 2 3 3 5 1 1 3 2 4 4 0 2-1 3-2 5-1 1-1 3-1 5s-1 4-2 5c-2 1-4 1-6 2-2 0-3 2-5 3-1 1-3 0-5-1-1-1-3-2-4-4-1-1-3-1-5-2-1-1-2-3-2-5 0-1 1-3 1-5 1-1 0-3 0-5 0-1 1-3 2-4 1-2 3-2 5-3 1-1 2-3 4-4l0-2z"/>
+              </svg>
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Europa — Transporte Terrestre</h3>
@@ -757,15 +809,97 @@
       <p class="text-text-light text-lg max-w-2xl mx-auto mb-10 font-body leading-relaxed">
         Confíe en los expertos. Contáctenos hoy para recibir asesoramiento personalizado y un presupuesto detallado.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+34657592063" class="btn-gold btn-gold-lg justify-center">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Solicitar Presupuesto
-        </a>
-        <a href="https://wa.me/34657592063" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp-lg justify-center">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp Directo
-        </a>
+
+      <!-- Contact Form -->
+      <div class="max-w-4xl mx-auto">
+        <form class="bg-navy/80 backdrop-blur-sm border border-white/10 rounded-2xl p-8 sm:p-12 space-y-6 text-left">
+
+          <!-- Row: Name + Email -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="home-name" class="block text-sm font-medium text-white/80 mb-2">Nombre completo <span class="text-gold">*</span></label>
+              <input type="text" id="home-name" name="name" required placeholder="Su nombre"
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300" />
+            </div>
+            <div>
+              <label for="home-email" class="block text-sm font-medium text-white/80 mb-2">Email <span class="text-gold">*</span></label>
+              <input type="email" id="home-email" name="email" required placeholder="su@email.com"
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300" />
+            </div>
+          </div>
+
+          <!-- Row: Phone + Service -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="home-phone" class="block text-sm font-medium text-white/80 mb-2">Teléfono</label>
+              <input type="tel" id="home-phone" name="phone" placeholder="+34 600 000 000"
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300" />
+            </div>
+            <div>
+              <label for="home-service" class="block text-sm font-medium text-white/80 mb-2">Servicio <span class="text-gold">*</span></label>
+              <select id="home-service" name="service" required
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white transition-all duration-300 appearance-none cursor-pointer select-arrow">
+                <option value="" disabled selected class="text-white/30">Seleccione un servicio</option>
+                <option value="exportacion">Exportación Internacional</option>
+                <option value="terrestre">Transporte Terrestre</option>
+                <option value="cuarentena">Cuarentena</option>
+                <option value="seguro">Seguro Especializado</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row: Origin + Destination -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="home-origin" class="block text-sm font-medium text-white/80 mb-2">Origen del caballo</label>
+              <input type="text" id="home-origin" name="origin" placeholder="Ciudad, País"
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300" />
+            </div>
+            <div>
+              <label for="home-destination" class="block text-sm font-medium text-white/80 mb-2">Destino</label>
+              <input type="text" id="home-destination" name="destination" placeholder="Ciudad, País"
+                class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300" />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="home-message" class="block text-sm font-medium text-white/80 mb-2">Mensaje <span class="text-gold">*</span></label>
+            <textarea id="home-message" name="message" required rows="4" placeholder="Describa sus necesidades de transporte..."
+              class="form-input w-full bg-navy border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all duration-300 resize-vertical"></textarea>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <div class="hidden" aria-hidden="true">
+            <label for="home-website">Website</label>
+            <input type="text" id="home-website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- Privacy Policy Checkbox -->
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="home-privacy" name="privacy" required
+              class="mt-1 w-4 h-4 accent-gold rounded border-white/15 bg-navy" />
+            <label for="home-privacy" class="text-sm text-white/70">
+              He leído y acepto la <a href="/equusexport/politica-de-privacidad.html" class="text-gold hover:text-gold-light underline transition-colors">Política de Privacidad</a> <span class="text-gold">*</span>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <button type="submit"
+              class="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-bold uppercase tracking-wider text-sm px-10 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">
+              Enviar Mensaje
+            </button>
+            <p class="flex items-center gap-2 text-white/50 text-sm">
+              <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Respuesta en menos de 24h garantizada
+            </p>
+          </div>
+
+        </form>
       </div>
     </div>
   </section>
@@ -785,7 +919,7 @@
               <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
               </svg>
-              Celín: +34 652 982 611
+              Celine: +34 652 98 26 11
             </a>
             <a href="mailto:info@equus-export.com" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
               <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -798,14 +932,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
               </svg>
-              Pda. Sol del Camp, 157, 03698 Agost (Alicante), España
+              EQUUS-EXPORT S.L.<br>Pda. Sol del Camp, 157<br>03698 Agost (Alicante)<br>España
             </p>
           </div>
         </div>
 
         <!-- Services Column -->
         <div>
-          <h4 class="font-heading text-lg font-bold text-white mb-6">Servicios</h4>
+          <a href="/equusexport/servicios/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Servicios</a>
           <ul class="space-y-3">
             <li><a href="/equusexport/servicios/exportacion-internacional.html" class="text-white/50 hover:text-gold transition-colors text-sm">Exportación Internacional</a></li>
             <li><a href="/equusexport/servicios/transporte-terrestre.html" class="text-white/50 hover:text-gold transition-colors text-sm">Transporte Terrestre</a></li>
@@ -815,7 +949,7 @@
 
         <!-- Links Column -->
         <div>
-          <h4 class="font-heading text-lg font-bold text-white mb-6">Enlaces</h4>
+          <a href="/equusexport/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Enlaces</a>
           <ul class="space-y-3">
             <li><a href="/equusexport/" class="text-white/50 hover:text-gold transition-colors text-sm">Inicio</a></li>
             <li><a href="/equusexport/sobre-nosotros.html" class="text-white/50 hover:text-gold transition-colors text-sm">Sobre Nosotros</a></li>
@@ -826,7 +960,7 @@
 
         <!-- Legal Column -->
         <div>
-          <h4 class="font-heading text-lg font-bold text-white mb-6">Legal</h4>
+          <a href="/equusexport/aviso-legal.html" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Legal</a>
           <ul class="space-y-3">
             <li><a href="/equusexport/aviso-legal.html" class="text-white/50 hover:text-gold transition-colors text-sm">Aviso Legal</a></li>
             <li><a href="/equusexport/politica-de-privacidad.html" class="text-white/50 hover:text-gold transition-colors text-sm">Política de Privacidad</a></li>
@@ -853,7 +987,48 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // Mobile menu toggle
+    // ---- Hero Carousel ----
+    (function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      const prevBtn = document.getElementById('hero-prev');
+      const nextBtn = document.getElementById('hero-next');
+      let current = 0;
+      let autoplayInterval;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function goToSlide(index) {
+        slides[current].classList.remove('active');
+        slides[current].style.opacity = '0';
+        dots[current].classList.remove('bg-white/80');
+        dots[current].classList.add('bg-white/40');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        slides[current].style.opacity = '1';
+        dots[current].classList.remove('bg-white/40');
+        dots[current].classList.add('bg-white/80');
+      }
+
+      function startAutoplay() {
+        if (prefersReducedMotion) return;
+        autoplayInterval = setInterval(() => goToSlide(current + 1), 5000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+
+      prevBtn.addEventListener('click', () => { goToSlide(current - 1); resetAutoplay(); });
+      nextBtn.addEventListener('click', () => { goToSlide(current + 1); resetAutoplay(); });
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.slide)); resetAutoplay(); });
+      });
+
+      startAutoplay();
+    })();
+
+    // ---- Mobile menu toggle ----
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobilePanel = document.getElementById('mobile-panel');
     mobileToggle.addEventListener('click', () => {
@@ -864,6 +1039,16 @@
     mobilePanel.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobilePanel.classList.add('hidden');
+      });
+    });
+
+    // Mobile servicios submenu toggle
+    document.querySelectorAll('.mobile-servicios-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        const arrow = btn.querySelector('svg');
+        submenu.classList.toggle('hidden');
+        arrow.style.transform = submenu.classList.contains('hidden') ? '' : 'rotate(180deg)';
       });
     });
 

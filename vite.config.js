@@ -28,21 +28,3 @@ export default defineConfig({
     },
   },
 });
-```
-
----
-
-### Paso 2 — Hacer el build
-```
-npm run build
-```
-
-Esto genera la carpeta `docs/` con todo compilado.
-
----
-
-### Paso 3 — Subir a GitHub
-```
-git add .
-git commit -m "build: configure docs folder for github pages"
-git push

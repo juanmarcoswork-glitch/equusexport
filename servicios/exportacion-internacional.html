@@ -77,10 +77,15 @@
   <header class="nav-sticky bg-navy/95 backdrop-blur-sm border-b border-white/5">
     <!-- Top bar with phone -->
     <div class="bg-navy-light border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-4 py-2 flex justify-end items-center gap-4 text-sm text-text-muted">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex justify-end items-center gap-4 sm:gap-6 text-sm text-text-muted">
         <a href="tel:+34657592063" class="flex items-center gap-2 hover:text-gold transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Christian: +34 657 59 20 63
+        </a>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <a href="tel:+34652982611" class="flex items-center gap-2 hover:text-gold transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Celine: +34 652 98 26 11
         </a>
       </div>
     </div>
@@ -139,37 +144,34 @@
   <!-- ═══════════════════════════════════════════════════════════════
        HERO SECTION
   ════════════════════════════════════════════════════════════════ -->
-  <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-    <!-- Background placeholder -->
-    <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy">
-      <img src="../assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Avión de carga para transporte aéreo de caballos" class="absolute inset-0 w-full h-full object-cover opacity-30" fetchpriority="high">
+  <section class="hero-collapse relative flex items-center justify-center bg-navy" style="height: 100vh;">
+    <div class="absolute inset-0">
+      <img src="../assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Avión de carga para transporte aéreo de caballos" class="w-full h-full object-cover object-center" fetchpriority="high">
+      <div class="hero-overlay"></div>
     </div>
-    <div class="hero-overlay"></div>
-
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
-      <!-- Breadcrumb -->
-      <div class="flex items-center justify-center gap-2 text-text-muted text-sm mb-8">
-        <a href="/equusexport/" class="hover:text-gold transition-colors">Inicio</a>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <span>Servicios</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <span class="text-gold">Exportación Internacional</span>
-      </div>
-
-      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Exportación Internacional<br>
-        <span class="text-gold">de Caballos</span>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-32">
+      <p class="hero-fade-out text-gold uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-6 font-body">Servicio Puerta a Puerta</p>
+      <h1 class="font-heading font-bold text-white leading-tight mb-8 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+        Exportación Internacional <span class="text-gold italic">de Caballos</span>
       </h1>
-      <div class="gold-line mx-auto mb-8"></div>
-      <p class="text-lg sm:text-xl text-text-light max-w-3xl mx-auto leading-relaxed">
-        Exportación internacional de caballos, transporte aéreo y terrestre premium para su caballo, puerta a puerta, garantizando seguridad y confort en cada milla.
-      </p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#presupuesto" class="btn-gold btn-gold-lg">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Solicitar Presupuesto
-        </a>
-        <a href="https://wa.me/34657592063" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp-lg">
+      <p class="hero-fade-out text-text-light text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body">Transporte aéreo y terrestre premium para su caballo, puerta a puerta, garantizando seguridad y confort en cada milla.</p>
+      <div class="hero-fade-out flex flex-wrap justify-center gap-4 mb-12">
+        <span class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm text-white font-body">
+          <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          +25 Países
+        </span>
+        <span class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm text-white font-body">
+          <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Homologados MAPA
+        </span>
+        <span class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm text-white font-body">
+          <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          20+ Años Experiencia
+        </span>
+      </div>
+      <div class="hero-fade-out flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#presupuesto" class="btn-gold btn-gold-lg justify-center">Solicitar Presupuesto</a>
+        <a href="https://wa.me/34657592063" target="_blank" rel="noopener" class="btn-whatsapp btn-whatsapp-lg justify-center">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp Directo
         </a>
@@ -397,7 +399,7 @@
         <!-- Europa -->
         <div class="service-card bg-navy-light rounded-lg overflow-hidden border border-white/5 fade-in">
           <div class="aspect-[3/2] overflow-hidden relative">
-            <img src="../assets/images/galeria/imagen en Miniatura -Vista Transporte de caballos en camino - Equus Export.webp" alt="Transporte terrestre Equus Export" class="w-full h-full object-cover" loading="lazy">
+            <img src="../assets/images/galeria/Europe Image.jpeg" alt="Transporte terrestre Equus Export" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-5">
             <h3 class="font-heading text-xl font-bold text-white mb-1">Europa</h3>
@@ -409,7 +411,7 @@
         <!-- Oriente Medio -->
         <div class="service-card bg-navy-light rounded-lg overflow-hidden border border-white/5 fade-in">
           <div class="aspect-[3/2] overflow-hidden relative">
-            <img src="../assets/images/galeria/imagen en Miniatura -Vista transporte caballos - Equus Export.webp" alt="Interior de avión de carga para caballos" class="w-full h-full object-cover" loading="lazy">
+            <img src="../assets/images/galeria/Medio oriente Image.webp" alt="Interior de avión de carga para caballos" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-5">
             <h3 class="font-heading text-xl font-bold text-white mb-1">Oriente Medio</h3>
@@ -421,7 +423,7 @@
         <!-- América -->
         <div class="service-card bg-navy-light rounded-lg overflow-hidden border border-white/5 fade-in">
           <div class="aspect-[3/2] overflow-hidden relative">
-            <img src="../assets/images/galeria/imagen en Miniatura -Cuarentenas de caballos - Equus Export.webp" alt="Centro de cuarentena equina Equus Export" class="w-full h-full object-cover" loading="lazy">
+            <img src="../assets/images/galeria/Latino America Image.webp" alt="Centro de cuarentena equina Equus Export" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-5">
             <h3 class="font-heading text-xl font-bold text-white mb-1">América</h3>
@@ -433,7 +435,7 @@
         <!-- Asia Oriental -->
         <div class="service-card bg-navy-light rounded-lg overflow-hidden border border-white/5 fade-in">
           <div class="aspect-[3/2] overflow-hidden relative">
-            <img src="../assets/images/galeria/imagen en Miniatura -Vista preparativos de Transporte de caballos - Equus Export.webp" alt="Preparativos de exportación equina" class="w-full h-full object-cover" loading="lazy">
+            <img src="../assets/images/galeria/Asia Image.webp" alt="Preparativos de exportación equina" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-5">
             <h3 class="font-heading text-xl font-bold text-white mb-1">Asia Oriental</h3>
@@ -491,6 +493,12 @@
             Transporte ecuestre premium con los más altos estándares de seguridad y bienestar animal.
           </p>
           <div class="mt-6 space-y-3">
+            <a href="tel:+34657592063" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
+              <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+              </svg>
+              Christian: +34 657 59 20 63
+            </a>
             <a href="tel:+34652982611" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
               <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>

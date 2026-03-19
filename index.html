@@ -28,6 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./src/styles.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
   {
@@ -150,10 +151,15 @@
   <header class="nav-sticky bg-navy/95 backdrop-blur-sm border-b border-white/5">
     <!-- Top bar with phone -->
     <div class="bg-navy-light border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-4 py-2 flex justify-end items-center gap-4 text-sm text-text-muted">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex justify-end items-center gap-4 sm:gap-6 text-sm text-text-muted">
         <a href="tel:+34657592063" class="flex items-center gap-2 hover:text-gold transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Christian: +34 657 59 20 63
+        </a>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <a href="tel:+34652982611" class="flex items-center gap-2 hover:text-gold transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Celine: +34 652 98 26 11
         </a>
       </div>
     </div>
@@ -167,10 +173,10 @@
       <div class="desktop-nav hidden md:flex items-center gap-8">
         <a href="/equusexport/" class="text-sm font-medium uppercase tracking-wider text-white border-b-2 border-gold pb-1">Inicio</a>
         <div class="relative group">
-          <button class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors flex items-center gap-1">
+          <a href="/equusexport/servicios/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors flex items-center gap-1">
             Servicios
             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
+          </a>
           <div class="absolute top-full left-0 mt-2 w-64 bg-navy border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <a href="/equusexport/servicios/exportacion-internacional.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors">Exportación Internacional</a>
             <a href="/equusexport/servicios/cuarentena.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">Cuarentena</a>
@@ -185,7 +191,7 @@
       <!-- Mobile hamburger -->
       <button id="mobile-toggle" class="mobile-menu text-white p-2" aria-label="Abrir menú">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+      </a>
     </nav>
     <!-- Mobile menu panel -->
     <div id="mobile-panel" class="hidden md:hidden bg-navy-light border-t border-white/10 px-4 pb-4">
@@ -208,8 +214,8 @@
     </div>
   </header>
 
-  <!-- ===== HERO CAROUSEL ===== -->
-  <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- ===== HERO CAROUSEL WITH COLLAPSE EFFECT ===== -->
+  <section id="inicio" class="hero-collapse relative flex items-center justify-center bg-navy" style="height: 100vh;">
     <!-- Carousel Slides -->
     <div id="hero-carousel" class="absolute inset-0">
       <div class="hero-slide active absolute inset-0 transition-opacity duration-1000 opacity-100">
@@ -228,15 +234,15 @@
 
     <!-- Content (stays on top of all slides) -->
     <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-32">
-      <p class="text-gold uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-6 font-body">Transporte Ecuestre Premium</p>
+      <p class="hero-fade-out text-gold uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-6 font-body">Transporte Ecuestre Premium</p>
       <h1 class="font-heading font-bold text-white leading-tight mb-8">
         Exportación de Caballos con <span class="text-gold italic">Garantía, Seguridad y Calidad</span>
       </h1>
-      <p class="text-text-light text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body">
+      <p class="hero-fade-out text-text-light text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-body">
         Líderes en logística internacional equina en Europa. Brindamos un servicio integral de primera clase desde el origen hasta el destino final.
       </p>
       <!-- Mini services badges -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <div class="hero-fade-out flex flex-wrap justify-center gap-4 mb-12">
         <span class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm text-white font-body">
           <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
           Vuelos Privados y Cargueros
@@ -250,7 +256,7 @@
           Atención Veterinaria 24/7
         </span>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="hero-fade-out flex flex-col sm:flex-row gap-4 justify-center">
         <a href="./contacto.html" class="btn-gold btn-gold-lg justify-center">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Cotizar Envío
@@ -267,31 +273,31 @@
   <!-- ===== AUTHORITY / STATS SECTION ===== -->
   <section class="bg-navy-light py-20 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center stagger-children">
         <!-- Stat 1 -->
-        <div class="fade-in">
+        <div class="fade-up-sm">
           <div class="text-gold font-heading text-4xl md:text-5xl font-bold mb-2">25+</div>
           <p class="text-text-muted text-sm uppercase tracking-wider font-body">Países Destino</p>
         </div>
         <!-- Stat 2 -->
-        <div class="fade-in">
+        <div class="fade-up-sm">
           <div class="text-gold font-heading text-4xl md:text-5xl font-bold mb-2">+500</div>
           <p class="text-text-muted text-sm uppercase tracking-wider font-body">Exportaciones Exitosas</p>
         </div>
         <!-- Stat 3 -->
-        <div class="fade-in">
+        <div class="fade-up-sm">
           <div class="text-gold font-heading text-4xl md:text-5xl font-bold mb-2">20</div>
           <p class="text-text-muted text-sm uppercase tracking-wider font-body">Años de Experiencia</p>
         </div>
         <!-- Stat 4: Homologados MAPA -->
-        <div class="fade-in">
+        <div class="fade-up-sm">
           <div class="text-gold mb-3 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
           </div>
           <p class="text-text-muted text-sm uppercase tracking-wider font-body leading-snug">Homologados por el<br>Ministerio de Agricultura (MAPA)</p>
         </div>
         <!-- Stat 5: Ubicados en España -->
-        <div class="fade-in col-span-2 md:col-span-1">
+        <div class="fade-up-sm col-span-2 md:col-span-1">
           <div class="text-gold mb-3 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
           </div>
@@ -306,7 +312,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Text -->
-        <div class="fade-in">
+        <div class="slide-left">
           <p class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-4 font-body">Sobre Nosotros</p>
           <h2 class="font-heading text-4xl md:text-5xl font-bold text-navy mb-6">Excelencia en Logística Ecuestre Internacional</h2>
           <div class="gold-line mb-8"></div>
@@ -345,7 +351,7 @@
           </div>
         </div>
         <!-- Image placeholder -->
-        <div class="fade-in relative rounded-lg overflow-hidden">
+        <div class="slide-right relative rounded-lg overflow-hidden">
           <img src="./assets/images/galeria/imagen en Miniatura -Vista hacienda Equus - Equus Export.webp" alt="Instalaciones de Equus Export en Agost, Alicante - paddocks con caballos" class="w-full h-full object-cover rounded-lg" loading="lazy" />
           <div class="absolute bottom-4 left-4 bg-navy/90 backdrop-blur-sm rounded-lg px-4 py-3 border border-gold/30">
             <p class="text-gold font-heading text-lg font-bold">Instalaciones en Agost</p>
@@ -365,116 +371,115 @@
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-navy mb-4">Soluciones Integrales para la Exportación Equina</h2>
         <div class="gold-line mx-auto mb-6"></div>
       </div>
-      <!-- Cards grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
 
-        <!-- Card 1: Cuarentena y Sanidad -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Cuarentenas de caballos - Equus Export.webp" alt="Boxes de cuarentena equina en Equus Export" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          <!-- Card 1: Cuarentena y Sanidad -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Cuarentenas de caballos - Equus Export.webp" alt="Boxes de cuarentena equina en Equus Export" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Cuarentena y Sanidad</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Instalaciones de primera clase en Alicante para el cuidado previo al viaje, gestión de análisis clínicos y cumplimiento de normativas.</p>
-            <a href="/equusexport/servicios/cuarentena.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Cuarentena y Sanidad</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Instalaciones de primera clase en Alicante para el cuidado previo al viaje, gestión de análisis clínicos y cumplimiento de normativas.</p>
+              <a href="/equusexport/servicios/cuarentena.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 2: Flete Aéreo -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Avión de carga Cargolux para transporte aéreo de caballos" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+          <!-- Card 2: Flete Aéreo -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Avión de carga Cargolux para transporte aéreo de caballos" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Flete Aéreo</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Transporte seguro y eficiente en aviones de carga especializados, con establos de vuelo diseñados para la máxima seguridad y confort.</p>
-            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Flete Aéreo</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Transporte seguro y eficiente en aviones de carga especializados, con establos de vuelo diseñados para la máxima seguridad y confort.</p>
+              <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 3: Logística Terrestre -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte de caballos en camino - Equus Export.webp" alt="Camión Equus Export en ruta de transporte terrestre de caballos" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-3.75 0V5.625m0 12.75v-3.375m0 0V5.625m0 9.75H3.375m0 0h7.5m0 0v-9.75"/></svg>
+          <!-- Card 3: Logística Terrestre -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte de caballos en camino - Equus Export.webp" alt="Camión Equus Export en ruta de transporte terrestre de caballos" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Logística Terrestre</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Traslado confortable en nuestra flota de camiones especializados de Equus Export, con climatización y bebederos continuos.</p>
-            <a href="/equusexport/servicios/transporte-terrestre.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-3.75 0V5.625m0 12.75v-3.375m0 0V5.625m0 9.75H3.375m0 0h7.5m0 0v-9.75"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Logística Terrestre</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Traslado confortable en nuestra flota de camiones especializados de Equus Export, con climatización y bebederos continuos.</p>
+              <a href="/equusexport/servicios/transporte-terrestre.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 4: Trámites Aduaneros -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Transporte aereo de caballos - Equus Export.webp" alt="Equipo Equus Export junto a avión Qatar Cargo para exportación equina" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          <!-- Card 4: Trámites Aduaneros -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Transporte aereo de caballos - Equus Export.webp" alt="Equipo Equus Export junto a avión Qatar Cargo para exportación equina" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Gestión Documental</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Gestión integral de todos los permisos, certificados de exportación, despachos de aduana y documentación requerida.</p>
-            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Gestión Documental</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Gestión integral de todos los permisos, certificados de exportación, despachos de aduana y documentación requerida.</p>
+              <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 5: Seguro Especializado -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Vista preparativos de Transporte de caballos - Equus Export.webp" alt="Preparativos de transporte de caballos en Equus Export" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"/></svg>
+          <!-- Card 5: Seguro Especializado -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Vista preparativos de Transporte de caballos - Equus Export.webp" alt="Preparativos de transporte de caballos en Equus Export" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Seguro Especializado</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Seguros de transporte, responsabilidad civil y cobertura integral para su caballo durante todo el proceso.</p>
-            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Seguro Especializado</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Seguros de transporte, responsabilidad civil y cobertura integral para su caballo durante todo el proceso.</p>
+              <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 6: Recepción en Destino -->
-        <div class="service-card-light bg-white rounded-lg overflow-hidden">
-          <div class="relative h-48 overflow-hidden">
-            <img src="./assets/images/galeria/imagen en Miniatura -Vista Mobilizacion en Vehiculo Transporte terrestre de caballos - Equus Export.webp" alt="Movilización de caballos en camión Equus Export" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-6">
-            <div class="text-gold mb-3">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 9c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-4.247m0 0A8.966 8.966 0 003 9c0-.778.099-1.533.284-2.253"/></svg>
+          <!-- Card 6: Recepción en Destino -->
+          <div class="service-card-light bg-white rounded-lg overflow-hidden scale-up">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./assets/images/galeria/imagen en Miniatura -Vista Mobilizacion en Vehiculo Transporte terrestre de caballos - Equus Export.webp" alt="Movilización de caballos en camión Equus Export" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <h3 class="font-heading text-2xl font-bold text-navy mb-3">Recepción en Destino</h3>
-            <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Coordinación logística global con nuestros agentes internacionales para garantizar una recepción fluida y entrega segura.</p>
-            <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
-              Ver más
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+            <div class="p-6">
+              <div class="text-gold mb-3">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 9c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-4.247m0 0A8.966 8.966 0 003 9c0-.778.099-1.533.284-2.253"/></svg>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-navy mb-3">Recepción en Destino</h3>
+              <p class="text-text-body text-sm leading-relaxed mb-6 font-body">Coordinación logística global con nuestros agentes internacionales para garantizar una recepción fluida y entrega segura.</p>
+              <a href="/equusexport/servicios/exportacion-internacional.html" class="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider hover:text-gold-muted transition-colors font-body">
+                Ver más
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
       </div>
     </div>
@@ -491,12 +496,12 @@
         <p class="text-text-body max-w-2xl mx-auto font-body">Un proceso simple y transparente para garantizar la seguridad en cada paso.</p>
       </div>
       <!-- Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative stagger-children">
         <!-- Connector line (desktop) -->
         <div class="hidden md:block absolute top-6 left-[16.66%] right-[16.66%] h-[2px] bg-gold/20"></div>
 
         <!-- Step 1 -->
-        <div class="text-center fade-in relative">
+        <div class="text-center fade-up-sm relative">
           <div class="timeline-dot-light mx-auto mb-6">
             <span class="text-gold font-heading text-xl font-bold">1</span>
           </div>
@@ -505,7 +510,7 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="text-center fade-in relative">
+        <div class="text-center fade-up-sm relative">
           <div class="timeline-dot-light mx-auto mb-6">
             <span class="text-gold font-heading text-xl font-bold">2</span>
           </div>
@@ -514,7 +519,7 @@
         </div>
 
         <!-- Step 3 -->
-        <div class="text-center fade-in relative">
+        <div class="text-center fade-up-sm relative">
           <div class="timeline-dot-light mx-auto mb-6">
             <span class="text-gold font-heading text-xl font-bold">3</span>
           </div>
@@ -525,69 +530,187 @@
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS SECTION ===== -->
-  <section class="bg-navy-light py-24">
+  <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+  <section class="bg-navy-light py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16 fade-in">
         <p class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-4 font-body">Testimonios</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Experiencias de Nuestros Clientes</h2>
         <div class="gold-line mx-auto"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="fade-in bg-navy border border-white/10 rounded-lg p-8">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-text-light text-sm leading-relaxed mb-6 font-body italic">"Impecable servicio. Enviamos dos caballos de salto a Estados Unidos y el nivel de comunicación de Celine y Christian durante todo el proceso fue excepcional. Llegaron en perfectas condiciones."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">MR</div>
-            <div>
-              <p class="text-white font-semibold text-sm">Martín Rodríguez</p>
-              <p class="text-text-muted text-xs">Haras El Paraíso</p>
+      <div class="relative max-w-3xl mx-auto">
+        <!-- Arrows -->
+        <button id="testimonial-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-10 h-10 bg-gold/20 hover:bg-gold/40 rounded-full flex items-center justify-center text-gold transition-colors" aria-label="Anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="testimonial-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-10 h-10 bg-gold/20 hover:bg-gold/40 rounded-full flex items-center justify-center text-gold transition-colors" aria-label="Siguiente">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <div id="testimonial-carousel" class="overflow-hidden">
+          <div id="testimonial-track" class="testimonial-track">
+            <!-- Testimonial 1 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Impecable servicio. Enviamos dos caballos de salto a Estados Unidos y el nivel de comunicación fue excepcional..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">MR</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Martín Rodríguez</p>
+                    <p class="text-text-muted text-xs">Haras El Paraíso</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"La cuarentena en sus instalaciones en Alicante es un hotel 5 estrellas para los caballos..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">CG</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Carolina Gómez</p>
+                    <p class="text-text-muted text-xs">Propietaria</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"La gestión documental es rápida y sin errores. Equus Export hizo que un trámite complejo pareciera sencillo..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">JB</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Javier Blanco</p>
+                    <p class="text-text-muted text-xs">Criador PRE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Exportamos una yegua PRE a Dubái y todo fue perfecto. El equipo coordinó cada detalle con las autoridades locales..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">AL</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Ana López</p>
+                    <p class="text-text-muted text-xs">Yeguada Los Olivos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Profesionalidad de primer nivel. Transportaron nuestro semental a México en tiempo récord..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">RM</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Ricardo Morales</p>
+                    <p class="text-text-muted text-xs">Ganadería Morales</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 6 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Llevamos años trabajando con Equus Export para envíos a toda Europa. Su servicio de transporte terrestre es puntual y seguro..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">PD</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Pierre Dubois</p>
+                    <p class="text-text-muted text-xs">Écurie du Château, Francia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 7 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Necesitábamos transportar tres caballos de doma a Alemania para una competición. Equus Export se encargó de todo..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">IF</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Isabel Fernández</p>
+                    <p class="text-text-muted text-xs">Club Hípico La Dehesa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 8 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-navy border border-white/10 rounded-lg p-8">
+                <div class="flex items-center gap-1 text-gold mb-4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-text-light text-base leading-relaxed mb-6 font-body italic">"Hemos trabajado con muchas empresas de transporte equino, pero Equus Export destaca por su atención al detalle..." <a href="https://www.facebook.com/celinekwink/" target="_blank" rel="noopener" class="text-gold hover:underline font-semibold not-italic">Leer más</a></p>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">AA</div>
+                  <div>
+                    <p class="text-white font-semibold text-sm">Ahmed Al-Rashid</p>
+                    <p class="text-text-muted text-xs">Royal Stables, Qatar</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Testimonial 2 -->
-        <div class="fade-in bg-navy border border-white/10 rounded-lg p-8">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-text-light text-sm leading-relaxed mb-6 font-body italic">"La cuarentena en sus instalaciones en Alicante es un hotel 5 estrellas para los caballos. Me dio muchísima tranquilidad saber que estaban en manos de profesionales tan dedicados."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">CG</div>
-            <div>
-              <p class="text-white font-semibold text-sm">Carolina Gómez</p>
-              <p class="text-text-muted text-xs">Propietaria</p>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="fade-in bg-navy border border-white/10 rounded-lg p-8">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-text-light text-sm leading-relaxed mb-6 font-body italic">"La gestión documental es rápida y sin errores. Equus Export hizo que un trámite complejo como la exportación a Medio Oriente pareciera sencillo. Totalmente recomendados."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">JB</div>
-            <div>
-              <p class="text-white font-semibold text-sm">Javier Blanco</p>
-              <p class="text-text-muted text-xs">Criador PRE</p>
-            </div>
-          </div>
-        </div>
+        <div id="testimonial-dots" class="flex justify-center gap-3 mt-8"></div>
       </div>
     </div>
   </section>
@@ -603,13 +726,10 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- América y Centro América -->
-        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
+        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8 slide-left">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <!-- Águila / Eagle silhouette — iconic Americas symbol -->
-              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
-                <path d="M24 6c-2 0-4 1-5 3-1 1-1 3-2 4 0 1-2 2-3 2-2 0-3 1-4 2s-1 3 0 4c1 2 3 2 5 3 1 0 2 1 3 2l2 3c0 1-1 2-2 3l-4 4c-1 1-2 3-1 4 0 1 1 1 2 1l5-3 3-2 3 2 5 3c1 0 2 0 2-1 1-1 0-3-1-4l-4-4c-1-1-2-2-2-3l2-3c1-1 2-2 3-2 2-1 4-1 5-3 1-1 1-3 0-4s-2-2-4-2c-1 0-3-1-3-2-1-1-1-3-2-4-1-2-3-3-5-3z"/>
-              </svg>
+              <img src="./assets/images/galeria/America Icon.svg" alt="Icono América y Centro América" class="w-12 h-12" style="filter: invert(62%) sepia(63%) saturate(407%) hue-rotate(12deg) brightness(92%) contrast(87%)">
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">América y Centro América</h3>
@@ -618,13 +738,10 @@
           </div>
         </div>
         <!-- Oriente Medio -->
-        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
+        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8 slide-right">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <!-- Mezquita / Mosque dome with minaret — iconic Middle East symbol -->
-              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
-                <path d="M24 4l-1 2c-3 2-6 5-8 9-1 3-2 6-2 9v14h4v-10h3v10h3v-12h2v12h3v-10h3v10h4V24c0-3-1-6-2-9-2-4-5-7-8-9l-1-2zm-14 28v6h4v-6h-4zm24 0v6h4v-6h-4zM6 36v2h36v-2H6zm14-20a4 4 0 108 0 4 4 0 00-8 0z"/>
-              </svg>
+              <img src="./assets/images/galeria/Medio Oriente icon.svg" alt="Icono Medio Oriente" class="w-12 h-12" style="filter: invert(62%) sepia(63%) saturate(407%) hue-rotate(12deg) brightness(92%) contrast(87%)">
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Medio Oriente</h3>
@@ -633,13 +750,10 @@
           </div>
         </div>
         <!-- Asia y Pacífico -->
-        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
+        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8 slide-left">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <!-- Torii gate — iconic Asian/Pacific symbol -->
-              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
-                <path d="M4 10c0-1 1-2 2-3h36c1 1 2 2 2 3v2H4v-2zm2 4h4v28h-4V14zm32 0h4v28h-4V14zm-26 0h3v4h-3v-4zm21 0h3v4h-3v-4zM6 8c1-2 4-4 8-5l10-1 10 1c4 1 7 3 8 5H6zm9 10h18v3H15v-3z"/>
-              </svg>
+              <img src="./assets/images/galeria/Asia Icon.svg" alt="Icono Asia y Pacífico" class="w-12 h-12" style="filter: invert(62%) sepia(63%) saturate(407%) hue-rotate(12deg) brightness(92%) contrast(87%)">
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Asia y Pacífico</h3>
@@ -648,13 +762,10 @@
           </div>
         </div>
         <!-- Europa - Transporte Terrestre -->
-        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8">
+        <div class="feature-card bg-navy-light border border-white/10 rounded-lg p-8 slide-right">
           <div class="flex items-start gap-4">
             <div class="text-gold flex-shrink-0">
-              <!-- Torre Eiffel / Eiffel Tower — iconic European symbol -->
-              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="currentColor" style="filter: drop-shadow(0 0 6px rgba(189, 146, 59, 0.6)) drop-shadow(0 0 12px rgba(189, 146, 59, 0.3))">
-                <path d="M24 2l-1 4-2 6h6l-2-6-1-4zm-4 12l-2 8h12l-2-8H20zm-3 10l-2 8h18l-2-8H17zm-3 10l-3 10h4l2-7h14l2 7h4l-3-10H14zm8-26h4v4h-4v-4zm-4 12h12v2H18v-2zm-4 10h20v2H14v-2z"/>
-              </svg>
+              <img src="./assets/images/galeria/Europe Icon.svg" alt="Icono Europa" class="w-12 h-12" style="filter: invert(62%) sepia(63%) saturate(407%) hue-rotate(12deg) brightness(92%) contrast(87%)">
             </div>
             <div>
               <h3 class="font-heading text-2xl font-bold text-white mb-2">Europa — Transporte Terrestre</h3>
@@ -674,23 +785,23 @@
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-navy mb-4">Nuestras Instalaciones y Flota</h2>
         <div class="gold-line mx-auto"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 stagger-children">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Vista de cuarentenas - Equus Export.webp" alt="Vista de los boxes de cuarentena Equus Export" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Vista de las cuarentenas de caballos - Equus Export.JPG" alt="Boxes de cuarentena con caballos en Agost" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Transporte terrestre de caballos - Equus Export.webp" alt="Remolque Equus Export con caballos cargados" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Vehiculo de Transporte terrestre de caballos - Equus Export.webp" alt="Camión Volvo de transporte equino Equus Export" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Vista Transporte aereo de caballos - Equus Export.webp" alt="Avión de carga para transporte aéreo de caballos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
-        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream">
+        <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream scale-up">
           <img src="./assets/images/galeria/imagen en Miniatura -Vista hacienda Equus - Equus Export.webp" alt="Hacienda Equus Export con paddocks y caballos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
       </div>
@@ -875,6 +986,9 @@
             </label>
           </div>
 
+          <!-- reCAPTCHA v2 Widget -->
+          <div class="g-recaptcha" data-sitekey="6LetgYosAAAAAFR6LUZtoCbP6LAxeaQQm7btjtsx" data-theme="dark"></div>
+
           <!-- Submit -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
             <button type="submit"
@@ -905,6 +1019,12 @@
             Transporte ecuestre premium con los más altos estándares de seguridad y bienestar animal.
           </p>
           <div class="mt-6 space-y-3">
+            <a href="tel:+34657592063" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
+              <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+              </svg>
+              Christian: +34 657 59 20 63
+            </a>
             <a href="tel:+34652982611" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
               <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
@@ -1020,16 +1140,74 @@
       });
     });
 
-    // Scroll fade-in animation
-    const observer = new IntersectionObserver((entries) => {
+    // Scroll entrance animations (Elementor-style triggers)
+    const animObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          animObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -60px 0px'
+    });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-up, .fade-up-sm').forEach(el => animObserver.observe(el));
+
+    // ---- Testimonial Carousel ----
+    (function() {
+      const track = document.getElementById('testimonial-track');
+      const dotsContainer = document.getElementById('testimonial-dots');
+      const prevBtn = document.getElementById('testimonial-prev');
+      const nextBtn = document.getElementById('testimonial-next');
+      if (!track || !dotsContainer) return;
+
+      const slides = track.children;
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+      let autoplayInterval;
+
+      // Track is already styled via CSS class .testimonial-track
+
+      function buildDots() {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
+          dot.setAttribute('aria-label', 'Ir a testimonio ' + (i + 1));
+          dot.addEventListener('click', () => { goToSlide(i); resetAutoplay(); });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function goToSlide(index) {
+        currentSlide = ((index % totalSlides) + totalSlides) % totalSlides;
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === currentSlide);
+        });
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(() => goToSlide(currentSlide + 1), 3000);
+      }
+
+      buildDots();
+      resetAutoplay();
+
+      // Arrow buttons
+      if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide(currentSlide - 1); resetAutoplay(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide(currentSlide + 1); resetAutoplay(); });
+
+      // Pause on hover
+      const carousel = document.getElementById('testimonial-carousel');
+      if (carousel) {
+        carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+        carousel.addEventListener('mouseleave', () => resetAutoplay());
+      }
+    })();
 
     // Sticky nav background on scroll
     const nav = document.querySelector('.nav-sticky');

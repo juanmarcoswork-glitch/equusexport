@@ -4,28 +4,132 @@
 
   <url>
     <loc>https://equusexport.com/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/"/>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://equusexport.com/sobre-nosotros/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://equusexport.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/sobre-nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/sobre-nosotros.html"/>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://equusexport.com/contacto/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://equusexport.com/en/about-us.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/sobre-nosotros.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/ar/about-us.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/about-us.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/sobre-nosotros.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/contacto.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/contacto.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/ar/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/contacto.html"/>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://equusexport.com/blog/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/blog/"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/blog/"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://equusexport.com/ar/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://equusexport.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://equusexport.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://equusexport.com/ar/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://equusexport.com/blog/"/>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

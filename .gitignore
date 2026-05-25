@@ -1,1 +1,9 @@
 node_modules/
+
+# Claude Code local config (no compartir)
+.claude/settings.local.json
+.claude/
+
+# Videos pesados de galería — usar CDN o git-lfs, no versionar
+assets/images/galeria/*.MOV
+assets/images/galeria/*.mp4

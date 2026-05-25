@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - الصفحة غير موجودة | EquusExport</title>
-  <meta name="description" content="الصفحة التي تبحث عنها غير موجودة أو تم نقلها. عد إلى الصفحة الرئيسية لـ EquusExport.">
+  <title>404 - Page Not Found | EquusExport</title>
+  <meta name="description" content="The page you are looking for does not exist or has been moved. Return to the EquusExport homepage.">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="alternate" hreflang="es" href="https://equus-export.com/404/">
-  <link rel="alternate" hreflang="en" href="https://equus-export.com/en/404/">
-  <link rel="alternate" hreflang="ar" href="https://equus-export.com/ar/404/">
-  <link rel="alternate" hreflang="fr" href="https://equus-export.com/fr/404/">
-  <link rel="alternate" hreflang="x-default" href="https://equus-export.com/404/">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://equus-export.com/404.html">
+  <link rel="alternate" hreflang="fr" href="https://equus-export.com/fr/404.html">
+  <link rel="alternate" hreflang="ar" href="https://equus-export.com/ar/404.html">
+
   <!-- Favicon -->
-  <link rel="icon" href="/wp-content/themes/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/wp-content/themes/equusexport/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/wp-content/themes/equusexport/assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/wp-content/themes/assets/css/main.css">
+  <link rel="stylesheet" href="/wp-content/themes/equusexport/assets/css/main.css">
 
   <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
@@ -29,9 +30,9 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "EquusExport",
-    "description": "تصدير الخيول الدولي من إسبانيا بخبرة 16 عامًا",
+    "description": "International horse export from Spain with 16 years of experience",
     "url": "https://equus-export.com",
-    "logo": "https://equus-export.com/wp-content/themes/equusexport/assets/images/galeria/EQUUS EXPORT LOGO.svg",
+    "logo": "https://equus-export.com/assets/images/galeria/EQUUS EXPORT LOGO.svg",
     "telephone": "+34657592063",
     "email": "info@equus-export.com",
     "address": {
@@ -42,7 +43,7 @@
       "postalCode": "03698",
       "addressCountry": "ES"
     },
-    "knowsAbout": ["تصدير الخيول", "نقل الخيول", "الحجر الصحي للخيول"]
+    "knowsAbout": ["Horse export", "Equine transport", "Equine quarantine"]
   }
 
     const mobileToggle = document.getElementById('mobile-toggle');
@@ -85,65 +86,63 @@
           Celine: +34 652 98 26 11
         </a>
         <span class="hidden sm:inline text-white/20">|</span>
-        <div class="flex items-center gap-1.5">
-          <a href="/404/" class="text-xs text-text-muted hover:text-gold transition-colors">ES</a>
-          <span class="text-white/20">|</span>
-          <a href="/en/404/" class="text-xs text-text-muted hover:text-gold transition-colors">EN</a>
-          <span class="text-white/20">|</span>
-          <a href="/fr/" class="text-xs text-text-muted hover:text-gold transition-colors">FR</a>
-          <span class="text-white/20">|</span>
-          <a href="/ar/404/" class="text-xs text-gold font-bold">AR</a>
-        </div>
+        <span class="flex items-center gap-2 text-xs">
+          <a href="/404.html" class="hover:text-gold transition-colors">ES</a>
+          <span class="text-white/30">|</span>
+          <span class="text-text-muted hover:text-gold transition">EN</span>
+          <span class="text-white/30">|</span>
+          <a href="/ar/404.html" class="hover:text-gold transition-colors">AR</a>
+        </span>
       </div>
     </div>
     <!-- Main nav -->
     <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="/ar/" class="flex items-center gap-3">
-        <img src="/wp-content/themes/assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-24 w-auto">
+      <a href="/fr/" class="flex items-center gap-3">
+        <img src="/wp-content/themes/equusexport/assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-24 w-auto">
       </a>
       <!-- Desktop links -->
       <div class="desktop-nav hidden md:flex items-center gap-8">
-        <a href="/ar/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">الرئيسية</a>
+        <a href="/fr/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Accueil</a>
         <div class="relative group">
-          <a href="/ar/services/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors flex items-center gap-1">
-            الخدمات
+          <a href="/fr/services/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors flex items-center gap-1">
+            Services
             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </a>
-          <div class="absolute top-full right-0 mt-2 w-64 bg-navy border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="/ar/services/international-export/" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors">تصدير دولي</a>
-            <a href="/ar/services/quarantine/" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">الحجر الصحي</a>
-            <a href="/ar/services/land-transport/" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">النقل البري</a>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-navy border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/fr/services/international-export.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors">Export International</a>
+            <a href="/fr/services/quarantine.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">Quarantaine</a>
+            <a href="/fr/services/land-transport.html" class="block px-4 py-3 text-sm text-text-light hover:text-gold hover:bg-white/5 transition-colors border-t border-white/5">Transport Terrestre</a>
           </div>
         </div>
-        <a href="/ar/blog/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">المدونة</a>
-        <a href="/ar/about-us/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">من نحن</a>
-        <a href="/ar/contact/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">اتصل بنا</a>
-        <a href="/ar/contact/" class="btn-gold text-xs">طلب عرض سعر</a>
+        <a href="/fr/blog/" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Blog</a>
+        <a href="/fr/about-us.html" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">À Propos</a>
+        <a href="/fr/contact.html" class="text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">Contact</a>
+        <a href="/fr/contact.html" class="btn-gold text-xs">Demander un Devis</a>
       </div>
       <!-- Mobile hamburger -->
-      <button id="mobile-toggle" class="mobile-menu text-white p-2" aria-label="فتح القائمة">
+      <button id="mobile-toggle" class="mobile-menu text-white p-2" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </nav>
     <!-- Mobile menu panel -->
     <div id="mobile-panel" class="hidden md:hidden bg-navy-light border-t border-white/10 px-4 pb-4">
-      <a href="/ar/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">الرئيسية</a>
+      <a href="/fr/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Accueil</a>
       <div class="border-b border-white/5">
         <button class="mobile-servicios-toggle w-full flex items-center justify-between py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors">
-          الخدمات
+          Services
           <svg class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="mobile-servicios-submenu hidden pr-4 pb-2 space-y-1">
-          <a href="/ar/services/international-export/" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">تصدير دولي</a>
-          <a href="/ar/services/quarantine/" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">الحجر الصحي</a>
-          <a href="/ar/services/land-transport/" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">النقل البري</a>
+        <div class="mobile-servicios-submenu hidden pl-4 pb-2 space-y-1">
+          <a href="/fr/services/international-export.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Export International</a>
+          <a href="/fr/services/quarantine.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Quarantaine</a>
+          <a href="/fr/services/land-transport.html" class="block py-2 text-sm text-text-light hover:text-gold transition-colors">Transport Terrestre</a>
         </div>
       </div>
-      <a href="/ar/blog/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">المدونة</a>
-      <a href="/ar/about-us/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">من نحن</a>
-      <a href="/ar/contact/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">اتصل بنا</a>
-      <a href="/ar/contact/" class="btn-gold mt-4 w-full justify-center text-xs">طلب عرض سعر</a>
+      <a href="/fr/blog/" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Blog</a>
+      <a href="/fr/about-us.html" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">À Propos</a>
+      <a href="/fr/contact.html" class="block py-3 text-sm font-medium uppercase tracking-wider text-text-light hover:text-gold transition-colors border-b border-white/5">Contact</a>
+      <a href="/fr/contact.html" class="btn-gold mt-4 w-full justify-center text-xs">Demander un Devis</a>
     </div>
   </header>
 
@@ -158,40 +157,40 @@
 
       <!-- Heading -->
       <h1 class="font-heading text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-        الصفحة غير موجودة
+        Page Not Found
       </h1>
 
       <!-- Description -->
       <p class="text-white/60 text-base leading-relaxed mb-10">
-        نأسف، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+        We're sorry, the page you are looking for does not exist or has been moved.
       </p>
 
       <!-- Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-        <a href="/ar/" class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold text-sm px-8 py-3.5 rounded-lg transition-colors">
+        <a href="/fr/" class="inline-flex items-center gap-2 bg-gold hover:bg-gold/90 text-navy font-bold text-sm px-8 py-3.5 rounded-lg transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
-          العودة إلى الرئيسية
+          Back to Home
         </a>
-        <a href="/ar/contact/" class="inline-flex items-center gap-2 border border-gold/50 hover:border-gold text-gold hover:bg-gold/10 font-semibold text-sm px-8 py-3.5 rounded-lg transition-colors">
+        <a href="/fr/contact.html" class="inline-flex items-center gap-2 border border-gold/50 hover:border-gold text-gold hover:bg-gold/10 font-semibold text-sm px-8 py-3.5 rounded-lg transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-          اتصل بنا
+          Contact Us
         </a>
       </div>
 
       <!-- Service Links -->
       <div class="border-t border-gold/10 pt-8">
-        <p class="text-white/40 text-sm mb-4">هل تبحث عن أحد خدماتنا؟</p>
+        <p class="text-white/40 text-sm mb-4">Looking for one of our services?</p>
         <div class="flex items-center justify-center gap-6 text-sm">
-          <a href="/ar/services/international-export/" class="text-gold/70 hover:text-gold transition-colors font-medium">
-            التصدير
+          <a href="/fr/services/international-export.html" class="text-gold/70 hover:text-gold transition-colors font-medium">
+            Export
           </a>
           <span class="text-gold/20">|</span>
-          <a href="/ar/services/land-transport/" class="text-gold/70 hover:text-gold transition-colors font-medium">
-            النقل
+          <a href="/fr/services/land-transport.html" class="text-gold/70 hover:text-gold transition-colors font-medium">
+            Transport
           </a>
           <span class="text-gold/20">|</span>
-          <a href="/ar/services/quarantine/" class="text-gold/70 hover:text-gold transition-colors font-medium">
-            الحجر الصحي
+          <a href="/fr/services/quarantine.html" class="text-gold/70 hover:text-gold transition-colors font-medium">
+            Quarantine
           </a>
         </div>
       </div>
@@ -204,9 +203,9 @@
 
         <!-- Brand Column -->
         <div class="lg:col-span-1">
-          <img src="/wp-content/themes/assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-24 w-auto">
+          <img src="/wp-content/themes/equusexport/assets/images/galeria/EQUUS EXPORT LOGO.svg" alt="Equus Export Logo" class="h-24 w-auto">
           <p class="text-white/50 text-sm mt-4 leading-relaxed">
-            نقل الخيول المتميز بأعلى معايير السلامة ورفاهية الحيوان.
+            Transport équestre premium avec les plus hauts standards de sécurité et de bien-être animal.
           </p>
           <div class="mt-6 space-y-3">
             <a href="tel:+34657592063" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors text-sm">
@@ -232,39 +231,39 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
               </svg>
-              EQUUS-EXPORT S.L.<br>Pda. Sol del Camp, 157<br>03698 Agost (Alicante)<br>إسبانيا
+              EQUUS-EXPORT S.L.<br>Pda. Sol del Camp, 157<br>03698 Agost (Alicante)<br>Spain
             </p>
           </div>
         </div>
 
         <!-- Services Column -->
         <div>
-          <a href="/ar/services/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">الخدمات</a>
+          <a href="/fr/services/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Services</a>
           <ul class="space-y-3">
-            <li><a href="/ar/services/international-export/" class="text-white/50 hover:text-gold transition-colors text-sm">تصدير دولي</a></li>
-            <li><a href="/ar/services/land-transport/" class="text-white/50 hover:text-gold transition-colors text-sm">النقل البري</a></li>
-            <li><a href="/ar/services/quarantine/" class="text-white/50 hover:text-gold transition-colors text-sm">الحجر الصحي</a></li>
+            <li><a href="/fr/services/international-export.html" class="text-white/50 hover:text-gold transition-colors text-sm">Export International</a></li>
+            <li><a href="/fr/services/land-transport.html" class="text-white/50 hover:text-gold transition-colors text-sm">Transport Terrestre</a></li>
+            <li><a href="/fr/services/quarantine.html" class="text-white/50 hover:text-gold transition-colors text-sm">Quarantaine</a></li>
           </ul>
         </div>
 
         <!-- Links Column -->
         <div>
-          <a href="/ar/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">روابط</a>
+          <a href="/fr/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Liens</a>
           <ul class="space-y-3">
-            <li><a href="/ar/" class="text-white/50 hover:text-gold transition-colors text-sm">الرئيسية</a></li>
-            <li><a href="/ar/about-us/" class="text-white/50 hover:text-gold transition-colors text-sm">من نحن</a></li>
-            <li><a href="/ar/blog/" class="text-white/50 hover:text-gold transition-colors text-sm">المدونة</a></li>
-            <li><a href="/ar/contact/" class="text-white/50 hover:text-gold transition-colors text-sm">اتصل بنا</a></li>
+            <li><a href="/fr/" class="text-white/50 hover:text-gold transition-colors text-sm">Accueil</a></li>
+            <li><a href="/fr/about-us.html" class="text-white/50 hover:text-gold transition-colors text-sm">À Propos</a></li>
+            <li><a href="/fr/blog/" class="text-white/50 hover:text-gold transition-colors text-sm">Blog</a></li>
+            <li><a href="/fr/contact.html" class="text-white/50 hover:text-gold transition-colors text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Legal Column -->
         <div>
-          <a href="/ar/legal-notice/" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">قانوني</a>
+          <a href="/fr/legal-notice.html" class="block font-heading text-lg font-bold text-white mb-6 hover:text-gold transition-colors">Mentions Légales</a>
           <ul class="space-y-3">
-            <li><a href="/ar/legal-notice/" class="text-white/50 hover:text-gold transition-colors text-sm">إشعار قانوني</a></li>
-            <li><a href="/ar/privacy-policy/" class="text-white/50 hover:text-gold transition-colors text-sm">سياسة الخصوصية</a></li>
-            <li><a href="/ar/cookie-policy/" class="text-white/50 hover:text-gold transition-colors text-sm">سياسة ملفات تعريف الارتباط</a></li>
+            <li><a href="/fr/legal-notice.html" class="text-white/50 hover:text-gold transition-colors text-sm">Mentions Légales</a></li>
+            <li><a href="/fr/privacy-policy.html" class="text-white/50 hover:text-gold transition-colors text-sm">Politique de Confidentialité</a></li>
+            <li><a href="/fr/cookie-policy.html" class="text-white/50 hover:text-gold transition-colors text-sm">Politique de Cookies</a></li>
           </ul>
         </div>
 
@@ -274,8 +273,8 @@
     <!-- Bottom Bar -->
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-white/40 text-sm">&copy; 2026 EQUUS EXPORT. جميع الحقوق محفوظة.</p>
-        <p class="text-white/30 text-xs">نقل الخيول المتميز من Alicante، إسبانيا</p>
+        <p class="text-white/40 text-sm">&copy; 2026 EQUUS EXPORT. Tous droits réservés.</p>
+        <p class="text-white/30 text-xs">Transport équestre premium depuis Alicante, Espagne</p>
       </div>
     </div>
   </footer>
